@@ -30,6 +30,7 @@ img {
 body {
     font-family: 'Manrope', sans-serif;
     background-color: var(--light-grayish-blue);
+    /* background-color: blueviolet; */
     color: var(--desaturated-dark-blue);
 }
 
