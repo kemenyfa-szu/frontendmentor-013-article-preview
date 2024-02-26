@@ -14,65 +14,99 @@
     <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | Article preview component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style></style>
   </head>
   <body>
     <main>
       <section class="article-container">
-        <div class="article-pic">
+        <article class="article">
           <img
             class="illustration"
             src="./images/drawers.jpg"
             alt="drawer cabinet with decorations on top"
           />
-        </div>
-        <article class="article">
-          <div class="article-text">
-            <h1 class="article-title">
-              Shift the overall look and feel by adding these wonderful touches
-              to furniture in your home
-            </h1>
-            <p class="article-text">
-              Ever been in a room and felt like something was missing? Perhaps
-              it felt slightly bare and uninviting. I’ve got some simple tips to
-              help you make any room feel complete.
-            </p>
-          </div>
-          <div class="social">
-            <div class="author">
-              <img
-                class="avatar"
-                src="./images/avatar-michelle.jpg"
-                alt="Profile pic of the author: Michelle Appleton"
-              />
-              <div class="publish-info">
-                <p class="author-name">Michelle Appleton</p>
-                <p class="publish-date">28 Jun 2020</p>
+          <div class="article-content">
+            <div class="article-actual-content">
+              <h1 class="article-title">
+                Shift the overall look and feel by adding these wonderful touches
+                to furniture in your home
+              </h1>
+              <p class="article-text">
+                Ever been in a room and felt like something was missing? Perhaps
+                it felt slightly bare and uninviting. I’ve got some simple tips to
+                help you make any room feel complete.
+              </p>
+
+            </div>
+            <div class="social" id="social">
+              <div class="author" id="author">
+                <img
+                  class="avatar"
+                  src="./images/avatar-michelle.jpg"
+                  alt="Profile pic of the author: Michelle Appleton"
+                />
+                <div class="publish-info">
+                  <p class="author-name">Michelle Appleton</p>
+                  <p class="publish-date">28 Jun 2020</p>
+                </div>
               </div>
-            </div>
-            <div class="share">
-              <img
-                src="./images/icon-share.svg"
-                alt="share-icon"
-                class="share-icon"
-              />
-            </div>
-            <div class="share-options">
-              <p class="share-text">Share</p>
-              <img
-                src="./images/icon-facebook.svg"
-                alt="icon: share on facebook"
-              />
-              <img
-                src="./images/icon-twitter.svg"
-                alt="icon: share on twitter"
-              />
-              <img
-                src="./images/icon-pinterest.svg"
-                alt="icon: share on pinterest"
-              />
+              <div class="bubble share-active" id="bubble"
+              onmouseover="ShowInteractiveElements()"
+              onclick="ShowInteractiveElements()"
+              onmouseleave="HideInteractiveElementsWithDelay()"
+              onfocus="ShowInteractiveElements()">
+                <div class="share-options">
+                  <p class="share-text">Share</p>
+                  <a
+                    href="#"
+                    class="social-share"
+                  >
+                    <img
+                      src="./images/icon-facebook.svg"
+                      alt="link: share on facebook"
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    class="social-share"
+                  >
+                    <img
+                      src="./images/icon-twitter.svg"
+                      alt="link: share on twitter"
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    class="social-share"
+                  >
+                    <img
+                      src="./images/icon-pinterest.svg"
+                      alt="link: share on pinterest"
+                    />
+                  </a>
+                </div>
+              </div>
+              <button
+                class="share-btn"
+                id="btnShare"
+                onmouseover="ShowInteractiveElements()"
+                onmouseleave="HideInteractiveElementsWithDelay()"
+                onclick="ShowInteractiveElements()"
+                onfocus="ShowInteractiveElements()"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="13"
+                  class="share-icon"
+                  aria-label="share icon"
+                  id="shareIcon"
+                >
+                  <title>share icon</title>
+                  <path
+                    d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </article>
@@ -85,5 +119,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+    <script src="./scripts.js"></script>
   </body>
 </html>
+</div>
